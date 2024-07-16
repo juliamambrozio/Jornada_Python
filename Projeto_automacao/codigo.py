@@ -36,7 +36,7 @@ time.sleep(5) # vai esperar um pouco nesse trecho
 pyautogui.write("https://dlp.hashtagtreinamentos.com/python/intensivao/login") #escrever
 pyautogui.press("enter") #apertar uma tecla 
 
-time.sleep(5) # vai esperar um pouco nesse trecho
+time.sleep(9) # vai esperar um pouco nesse trecho
 
 # Passo 2: Fazer o login
 
@@ -52,9 +52,9 @@ time.sleep(3) # vai esperar um pouco nesse trecho
 
 # Passo 3: Pegar/Importar dados
 
-import pandas # trabalhar com vários tipos de dados
+import pandas as pd # trabalhar com vários tipos de dados
 
-tabela = pandas.read_csv("produtos.csv") # armazenando dados na var
+tabela = pd.read_csv("produtos.csv") # armazenando dados na var
 
 print(tabela)
 
@@ -71,7 +71,7 @@ for linha in tabela.index: # phyton chama cada linha de index
     
     
     pyautogui.press("tab") #clicar
-    marca = str(taCAHA000   bela.loc[linha, "marca"]) # localizar ítem e passar para string
+    marca = str(tabela.loc[linha, "marca"]) # localizar ítem e passar para string
     pyautogui.write(marca) # escrever
 
     
